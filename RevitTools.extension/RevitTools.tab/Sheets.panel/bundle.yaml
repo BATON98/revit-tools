@@ -1,0 +1,4 @@
+title: "Листы и виды"
+layout:
+  - SheetsFromCSV
+  - BatchRename
