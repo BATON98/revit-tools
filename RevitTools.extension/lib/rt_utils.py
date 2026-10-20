@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Общие функции для кнопок RevitTools (Revit 2026, pyRevit)."""
+"""Общие функции для кнопок RevitTools (Revit 2027, pyRevit 7)."""
 from __future__ import unicode_literals
 
 import io
@@ -12,7 +12,7 @@ from pyrevit import DB, forms
 # ---------------------------------------------------------------- ElementId
 
 def eid_int(element_id):
-    """ElementId -> int. В Revit 2024+ используется .Value (IntegerValue удалён в 2026)."""
+    """ElementId -> int. В Revit 2024+ используется .Value (IntegerValue удалён в 2026+)."""
     try:
         return int(element_id.Value)
     except AttributeError:
@@ -20,7 +20,7 @@ def eid_int(element_id):
 
 
 def to_eid(number):
-    """int/str -> ElementId (в Revit 2026 конструктор принимает Int64)."""
+    """int/str -> ElementId (с Revit 2026 конструктор принимает Int64)."""
     return DB.ElementId(System.Int64(int(number)))
 
 

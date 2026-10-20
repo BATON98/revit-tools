@@ -1,6 +1,6 @@
 # RevitTools
 
-Набор инструментов для **Autodesk Revit 2026** на базе [pyRevit](https://github.com/pyrevitlabs/pyRevit).
+Набор инструментов для **Autodesk Revit 2027** (работает и в 2025–2026) на базе [pyRevit](https://github.com/pyrevitlabs/pyRevit).
 После установки в Revit появляется вкладка **RevitTools** с четырьмя панелями.
 
 | Панель | Кнопка | Что делает |
@@ -20,9 +20,10 @@
 
 ## Установка
 
-1. **Установите pyRevit** (версия 5 или новее — она поддерживает Revit 2026):
+1. **Установите pyRevit 7.0 или новее** — именно с этой версии полностью поддерживается Revit 2027:
    скачайте установщик со страницы [pyRevit Releases](https://github.com/pyrevitlabs/pyRevit/releases)
-   (файл `pyRevit_..._signed.exe`) и запустите. Закройте Revit на время установки.
+   (файл `pyRevit_7...._signed.exe`, без `CLI` и `admin` в названии) и запустите.
+   Закройте Revit на время установки. Если pyRevit уже стоит старой версии — сначала удалите его.
 2. **Скачайте этот репозиторий**: зелёная кнопка **Code → Download ZIP** на GitHub.
    Распакуйте, например, в `C:\RevitTools` — так, чтобы внутри была папка `RevitTools.extension`:
    ```
@@ -73,4 +74,4 @@ RevitTools.extension/
 ```
 
 Каждая кнопка — папка `*.pushbutton` со `script.py` (код), `bundle.yaml` (название и подсказка) и `icon.png`.
-Скрипты рассчитаны на движок IronPython 2.7, который pyRevit использует по умолчанию.
+Скрипты работают на встроенных движках pyRevit — IronPython 2.7 и IronPython 3.4.
